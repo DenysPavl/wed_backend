@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>JS train</title>
+    <!--Комент-->
+  </head>
+  <body>
+    <header class="header">
+      <p>Hello</p>
+    </header>
+
+    <button onclick="OpenModal()">Register</button>
+    <button onclick="CloseModal()">CloseRegister</button>
+    <button onclick="Look_all_Comments()">Look_all_Comments</button>
+    <button onclick="Look_Authors_Comments()">Look_Authors_Comments</button>
+    <button onclick="DeleteToken()">DeleteToken</button>
+
+    <div id="modalWindow" class="modal">
+      <div class="modal-content">
+        <div class="con4">
+          <h1>Login</h1>
+          <form method="post" id="login_form">
+            <label for="Email">Email</label>
+            <p></p>
+            <input
+              type="email"
+              class="input"
+              name="email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              required
+              placeholder="example@mail.com"
+              title="Введіть коректну адресу електронної пошти у форматі example@mail.com"
+            />
+            <p></p>
+            <label for="Password">Password</label>
+            <p></p>
+            <input type="password" class="input" name="password" required />
+            <input class="button" type="submit" value="Login" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="./core/index.js"></script>
+    <script src="./core/modalWindow.js"></script>
+  </body>
+</html>
